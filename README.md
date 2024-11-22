@@ -1,5 +1,6 @@
 # Vale Imobiliária
 Atividade: Briefing, logomarca e desenvolvimento de sistema para a imobiliária VALE IMOBILIÁRIA.
+
 [ADICIONAR GIF DO SITE]
 
 ## Proposta do site
