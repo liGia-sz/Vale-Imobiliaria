@@ -1,0 +1,88 @@
+body {
+    background-color: rgb(248, 238, 225);
+}
+/* NAVBAR */
+.navbar-nav .nav-link {
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    font-family: 'Arial', sans-serif; /* Altere para a fonte desejada */
+    font-weight: bold; /* Opcional: Deixa o texto mais espesso */
+    color: #3a3232; /* Cor do texto */
+}
+
+/* Adiciona a borda laranja abaixo de cada item ao passar o mouse */
+.navbar-nav .nav-link {
+    position: relative; /* Necessário para a linha abaixo do item */
+    padding-bottom: 5px; /* Espaçamento entre o texto e a linha */
+    font-size: 1.1rem; /* Ajuste o tamanho da fonte */
+    font-family: 'Arial', sans-serif; /* Altere para a fonte desejada */
+  }
+  
+  /* Pseudo-elemento para a linha laranja */
+  .navbar-nav .nav-link::after {
+    content: ''; /* Necessário para criar um pseudo-elemento */
+    position: absolute;
+    bottom: 0; /* Posiciona a linha na parte inferior do link */
+    left: 0;
+    width: 100%; /* A linha cobre a largura total do link */
+    height: 3px; /* Espessura da linha */
+    background-color: rgb(207, 159, 69); /* Cor da linha */
+    transform: scaleX(0); /* Inicialmente, a linha é invisível */
+    transform-origin: right; /* Faz a linha começar da direita */
+    transition: transform 0.3s ease-in-out; /* Efeito suave ao exibir a linha */
+  }
+  
+  /* Mostra a linha laranja quando o mouse passa sobre o item */
+  .navbar-nav .nav-link:hover::after {
+    transform: scaleX(1); /* A linha se expande para cobrir o link */
+    transform-origin: left; /* A linha se expande da esquerda para a direita */
+  }
+
+  /*TEXTO ACIMA DA IMAGEM INICIAL*/
+  .titulo-header{
+    color: aliceblue;
+  }
+  .texto-header{
+    color:aliceblue
+  }
+
+  /* CARDS*/
+  .card-group .card {
+    margin: 10px; /* Espaçamento entre os cards */
+  }
+  
+ /* Estilo para o container da imagem */
+.background {
+    position: relative;
+    width: 100%;
+    height: 700px;  /* Definindo a altura da imagem de fundo */
+}
+
+/* Estilo para o overlay que contém o título, descrição e barra de pesquisa */
+.overlay {
+    position: top;
+    top: 0; /* Isso garante que o overlay ocupe toda a altura da imagem */
+    width: 50%;
+    height: 90%; 
+    background: rgba(244, 245, 242, 0.952); /* Fundo semitransparente */
+    color: rgb(12, 11, 11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10; /* Garante que o overlay fique sobre a imagem */
+}
+
+/* Ajuste de margem para o título e a descrição */
+.titulo-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.texto-header {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+ 
