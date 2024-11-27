@@ -55,22 +55,46 @@
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
     </div>
-    <!-- Imagem de fundo -->
-    <div class="background">
-    <img src="img/página-inicial.png" class="d-block" alt="Imagem Inicial"
-        style="width: 100%; height: 700px; object-fit: cover;">
-        <div class="carousel-caption d-none d-md-block">
-            <h3>Encontre seu novo Lar!</h3>
-            <h4>Na Vale Imobiliária, conectamos você aos melhores imóveis da região. Seja para comprar, alugar ou investir, temos opções para todos os gostos e orçamentos. Confiança e excelência em cada negociação.</h4>
-          </div>
+      <!-- Imagem de fundo -->
+      <img src="img/página-inicial.png" alt="Imagem Inicial" 
+      style="width: 100%; height: 700px; object-fit: cover;">
+    <!-- Card Principal -->
+<div style="display: flex; justify-content: center; align-items: center; margin-top: -150px;">
+    <div class="card-imagem" style="background-color: white; border-radius: 15px; padding: 20px; width: 80%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <div style="display: flex; align-items: left; gap: 15px; margin-bottom: 20px;">
+            <!-- Imagem -->
+            <img src="img/logo-barra.png" alt="Logo" style="width: 70px; height: 70px; object-fit: contain;">
+            <!-- Texto -->
+            <div style="text-align: left;">
+                <h3>Quer acelerar sua imobiliária?</h3>
+                <p>Descubra o que oferecemos para conectar clientes aos melhores imóveis com eficiência e confiança!</p>
+            </div>
+        </div>
+        <!-- Cards Menores -->
+        <div class="card-content" style="display: flex; gap: 20px; justify-content: space-between;">
+            <div class="card-item" style="flex: 1; background-color: #f9f9f9; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                <h3>Fiança Aluguel</h3>
+                <p>A maior garantia de aluguel, simples e segura, sem fiador ou cheque caução.</p>
+            </div>
+            <div class="card-item" style="flex: 1; background-color: #f9f9f9; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                <h3>Financiamento Imobiliário</h3>
+                <p>Crédito sem burocracia em uma plataforma 100% digital.</p>
+            </div>
+            <div class="card-item" style="flex: 1; background-color: #f9f9f9; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                <h3>CRM</h3>
+                <p>Indicadores de performance e relacionamento com clientes.</p>
+            </div>
+        </div>
     </div>
+</div>
 </header>
          
         <section id="destaques">
-            <span class="description-title">
+            <span class="description-title" style="display: block; text-align: center;">
                 <strong>IMÓVEIS A VENDA EM DESTAQUE</strong>
             </span>
-            <h2>Encontre seu novo Lar!</h2>
+            <!--CARDS DE IMOVEIS EM DESTAQUE-->
+            <h2 class="large-heading">Encontre seu novo Lar</h2>
             <div class="container">
                 <div class="row">
                     <!-- Card 1 -->
@@ -112,6 +136,52 @@
             </div>
         </section>
         
+        <!-- ... -->
+         <section id="curadoria">
+        <span class="description-title" style="display: block; text-align: center;">
+            <strong>CURADORIA VALE IMOBILIÁRIA</strong>
+        </span>
+        <h2 class="large-heading">Imóveis selecionados por nós</h2> 
+        <div class="container">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/imovel1.png" class="card-img-top" alt="Casa grande">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa de 3 quartos - R$ 500.000</h5>
+                            <p class="card-text">Uma espaçosa casa com 3 quartos, ideal para famílias que buscam conforto e praticidade. Com um grande quintal e localização tranquila, oferece um ótimo custo-benefício.</p>
+                            <a href="receita1.html" class="btn btn-warning w-50">Ver Imóvel</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/imovel2.png" class="card-img-top" alt="Apartamento moderno">
+                        <div class="card-body">
+                            <h5 class="card-title">Apartamento de 2 quartos - R$ 300.000</h5>
+                            <p class="card-text">Apartamento moderno e aconchegante, perfeito para quem busca praticidade e conforto. Com 2 quartos, cozinha planejada e ótima localização perto de comércios e transporte público.</p>
+                            <a href="#" class="btn btn-warning w-50">Ver Imóvel</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="img/imovel3.png" class="card-img-top" alt="Casa aconchegante">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa de 2 quartos - R$ 350.000</h5>
+                            <p class="card-text">Casa charmosa de 2 quartos, com ambiente acolhedor e perfeito para quem deseja um lar simples e confortável. Com área externa para lazer e fácil acesso a principais vias da cidade.</p>
+                            <a href="#" class="btn btn-warning w-50">Ver Imóvel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </body>
     <footer class="footer">
         <div class="footer-container">
