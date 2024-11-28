@@ -1,3 +1,142 @@
-body {
+body, html {
+  margin: 0;
+  padding: 0;
   background-color: rgb(248, 238, 225);
 }
+
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5e9b6;
+  padding: 10px 20px;
+}
+
+.navbar-brand img {
+  width: 90px;
+  height: 90px;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.links li a {
+  color: #ac550f;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.action_btn { 
+  background-color: #e99739;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.toggle_btn {
+  display: none;
+  cursor: pointer;
+}
+
+/* Dropdown Menu */
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #333;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.dropdown_menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown_menu ul li {
+  margin-bottom: 10px;
+}
+
+.dropdown_menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .links {
+      display: none;
+  }
+
+  .toggle_btn {
+      display: block;
+  }
+
+  .dropdown_menu {
+      display: none; /* Initially hide the dropdown menu */
+  }
+
+  .dropdown_menu ul {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .dropdown_menu ul li a {
+      padding: 15px;
+  }
+
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+
+/* Seção com a imagem de fundo */
+.banner {
+  position: relative;
+  background-image: url('sua-imagem.jpg'); /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  background-position: center;
+  height: 60vh; /* Ajuste a altura conforme necessário */
+}
+
+/* Contêiner para o texto e barra de busca */
+.text-container {
+  position: absolute;
+  top: 30%;  /* Ajuste a posição vertical para centralizar o texto */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: white; /* Cor do texto */
+  text-align: center;
+  width: 100%;
+}
+
+/* Estilos adicionais para o título e o subtítulo */
+.titulo-header {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.texto-header {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Barra de busca */
+.search-bar {
+  margin-top: 1.5rem;
+}
+
+
+
+
