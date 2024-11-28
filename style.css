@@ -8,11 +8,10 @@ body, html {
 .bg-navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: #f5e9b6;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #faf1c9;
   padding: 10px 20px;
 }
-
 
 /* Seção com a imagem de fundo */
 .banner {
