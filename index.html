@@ -1,214 +1,251 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
-        <meta name="viewport" content="width=evidence-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="./style.css"> 
-        <title>Vale Imobiliária</title>
-        <link
-         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
-         crossorigin="anonymous">
-         <!--CSS do Bootstrap -->
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=evidence-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Vale Imobiliária</title>
+
+    <script>
+        const toggleBtn = documento.querySelector('toggle_btn')
+        const toggleBtnIcon = documento.querySelector('toggle_btn i')
+        const dropDownMenu = documento.querySelector('dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-x-mark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+
 </head>
-       
 
-        <!--Bootstrap Icons-->
-        <link rel="icon" href="img/logo-barra.png" type="image/x-icon">
 
-    </head>
-    <body>
-        <header>
-              <!--NAVBAR-->
-              <div class="navbar">
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/Logo.png" alt="Logo" width="90" height="90">
-                </a>
-                <ul class="links">
-                    <li><a href="#">Imóveis</a></li>
-                    <li><a href="#">Nós</a></li>
-                    <li><a href="#">Comprar</a></li>
-                    <li><a href="#">Vender</a></li>
-                </ul>
-                <a href="#" class="action_btn">Login</a>
-                <div class="toggle_btn">
-                    <i class="fa-solid fa-bars"></i>
+<!--Bootstrap Icons-->
+<link rel="icon" href="img/logo-barra.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <!--NAVBAR-->
+        <div class="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/Logo.png" alt="Logo" width="90" height="90">
+            </a>
+            <ul class="links">
+                <li><a href="#">Imóveis</a></li>
+                <li><a href="#">Nós</a></li>
+                <li><a href="#">Comprar</a></li>
+                <li><a href="#">Vender</a></li>
+            </ul>
+            <a href="#" class="action_btn">Login</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <!-- Dropdown menu that will be toggled -->
+        <div class="dropdown_menu">
+            <ul>
+                <li><a href="#">Imóveis</a></li>
+                <li><a href="#">Nós</a></li>
+                <li><a href="#">Comprar</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#" class="action_btn">Login</a></li>
+            </ul>
+        </div>
+
+    </header>
+    <main>
+        <div style="position: relative;">
+            <div class="container text-center"
+                style="position: absolute; top: 20%; left: 50%; transform: translateX(-50%); z-index: 10;">
+                <h1 class="titulo-header" style="color: white; position: center; margin-top: -220px;">Onde você quer
+                    morar?
+                </h1>
+                <h4 class="texto-header" style="color: white;">Conte com a comunidade de imobiliárias parceiras da Vale
+                    Imobiliária para encontrar o lar ideal.</h4>
+                <!-- Barra de busca -->
+                <div class="container">
+                    <form class="d-flex" role="search" style="max-width: 500px; margin: 0 auto;">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            style="width: 80%;">
+                        <button class="btn btn-outline-success" type="submit" style="width: 20%;">Search</button>
+                    </form>
                 </div>
             </div>
-            
-            <!-- Dropdown menu that will be toggled -->
-            <div class="dropdown_menu">
-                <ul>
-                    <li><a href="#">Imóveis</a></li>
-                    <li><a href="#">Nós</a></li>
-                    <li><a href="#">Comprar</a></li>
-                    <li><a href="#">Vender</a></li> 
-                    <li><a href="#" class="action_btn">Login</a></li>
-                </ul>
-            </div>
-            
-</header>
+            <!-- Imagem de fundo -->
+            <img src="img/página-inicial.png" alt="Imagem Inicial" class="full-screen-image">
 
-<script>
-    const toggleBtn = documento.querySelector('toggle_btn')
-    const toggleBtnIcon = documento.querySelector('toggle_btn i')
-    const dropDownMenu = documento.querySelector('dropdown_menu')
+            <!-- Card Principal -->
+            <div style="display: flex; justify-content: center; align-items: center; margin-top: -250px;">
+                <div class="card-imagem"
+                    style="background-color: white; border-radius: 15px; padding: 20px; width: 80%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <div style="display: flex; align-items: left; gap: 15px; margin-bottom: 20px;">
+                        <!-- Imagem -->
+                        <img src="img/logo-barra.png" alt="Logo"
+                            style="width: 70px; height: 70px; object-fit: contain;">
+                        <!-- Texto -->
+                        <div style="text-align: left;">
+                            <h3>Quer acelerar sua imobiliária?</h3>
+                            <p>Descubra o que oferecemos para conectar clientes aos melhores imóveis com eficiência e
+                                confiança!</p>
+                        </div>
+                    </div>
+                    <!-- Cards Menores -->
+                    <div class="card-content" style="display: flex; gap: 20px; justify-content: space-between;">
+                        <div class="card-item"
+                            style="flex: 1; background-color: #f9f9f9; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                            <h3>Fiança Aluguel</h3>
+                            <p>A maior garantia de aluguel, simples e segura, sem fiador ou cheque caução.</p>
+                        </div>
+                        <div class="card-item"
+                            style="flex: 1; background-color: #f9f9f9; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                            <h3>Financiamento Imobiliário</h3>
+                            <p>Crédito sem burocracia em uma plataforma 100% digital.</p>
+                        </div>
+                        <div class="card-item"
+                            style="flex: 1; background-color: #f9f9f9; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                            <h3>CRM</h3>
+                            <p>Indicadores de performance e relacionamento com clientes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section id="destaques">
+                <span class="description-title" style="display: block; text-align: center;">
+                    <strong>IMÓVEIS A VENDA EM DESTAQUE</strong>
+                </span>
+                <!--CARDS DE IMOVEIS EM DESTAQUE-->
+                <h2 class="large-heading">Encontre seu novo Lar</h2>
+                <div class="container">
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="img/imovel1.png" class="card-img-top" alt="Casa grande">
+                                <div class="card-body">
+                                    <h5 class="card-title">Casa de 3 quartos - R$ 500.000</h5>
+                                    <p class="card-text">Uma espaçosa casa com 3 quartos, ideal para famílias que buscam
+                                        conforto e praticidade. Com um grande quintal e localização tranquila, oferece
+                                        um
+                                        ótimo custo-benefício.</p>
+                                    <a href="receita1.html" class="btn btn-warning w-50">Ver Imóvel</a>
+                                </div>
+                            </div>
+                        </div>
 
-    toggleBtn.onclick = function (){
-      dropDownMenu.classList.toggle('open')
-      const isOpen = dropDownMenu.classList.contains('open')
+                        <!-- Card 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="img/imovel2.png" class="card-img-top" alt="Apartamento moderno">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apartamento de 2 quartos - R$ 300.000</h5>
+                                    <p class="card-text">Apartamento moderno e aconchegante, perfeito para quem busca
+                                        praticidade e conforto. Com 2 quartos, cozinha planejada e ótima localização
+                                        perto
+                                        de comércios e transporte público.</p>
+                                    <a href="#" class="btn btn-warning w-50">Ver Imóvel</a>
+                                </div>
+                            </div>
+                        </div>
 
-      toggleBtnIcon.classList = isOpen
-      ? 'fa-solid fa-x-mark'
-      : 'fa-solid fa-bars'
-    }
-</script>
-         
-<div style="position: relative;">
-    <div class="container text-center" style="position: absolute; top: 20%; left: 50%; transform: translateX(-50%); z-index: 10;">
-        <h1 class="titulo-header" style="color: white; position: center; margin-top: -220px;">Onde você quer morar?</h1>
-        <h4 class="texto-header"style="color: white;">Conte com a comunidade de imobiliárias parceiras da Vale Imobiliária para encontrar o lar ideal.</h4>
-        <!-- Barra de busca -->
-        <div class="container">
-            <form class="d-flex" role="search" style="max-width: 500px; margin: 0 auto;">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 80%;">
-              <button class="btn btn-outline-success" type="submit" style="width: 20%;">Search</button>
-            </form>
-          </div>
-    </div>
-      <!-- Imagem de fundo -->  
-      <img src="img/página-inicial.png" alt="Imagem Inicial" class="full-screen-image">
-
-    <!-- Card Principal -->
-<div style="display: flex; justify-content: center; align-items: center; margin-top: -250px;">
-    <div class="card-imagem" style="background-color: white; border-radius: 15px; padding: 20px; width: 80%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-        <div style="display: flex; align-items: left; gap: 15px; margin-bottom: 20px;">
-            <!-- Imagem -->
-            <img src="img/logo-barra.png" alt="Logo" style="width: 70px; height: 70px; object-fit: contain;">
-            <!-- Texto -->
-            <div style="text-align: left;">
-                <h3>Quer acelerar sua imobiliária?</h3>
-                <p>Descubra o que oferecemos para conectar clientes aos melhores imóveis com eficiência e confiança!</p>
-            </div>
-        </div>
-        <!-- Cards Menores -->
-        <div class="card-content" style="display: flex; gap: 20px; justify-content: space-between;">
-            <div class="card-item" style="flex: 1; background-color: #f9f9f9; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-                <h3>Fiança Aluguel</h3>
-                <p>A maior garantia de aluguel, simples e segura, sem fiador ou cheque caução.</p>
-            </div>
-            <div class="card-item" style="flex: 1; background-color: #f9f9f9; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-                <h3>Financiamento Imobiliário</h3>
-                <p>Crédito sem burocracia em uma plataforma 100% digital.</p>
-            </div>
-            <div class="card-item" style="flex: 1; background-color: #f9f9f9; border-radius: 10px; padding: 15px; text-align: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-                <h3>CRM</h3>
-                <p>Indicadores de performance e relacionamento com clientes.</p>
-            </div>
-        </div>
-    </div>
-</div>
-        <section id="destaques">
-            <span class="description-title" style="display: block; text-align: center;">
-                <strong>IMÓVEIS A VENDA EM DESTAQUE</strong>
-            </span>
-            <!--CARDS DE IMOVEIS EM DESTAQUE-->
-            <h2 class="large-heading">Encontre seu novo Lar</h2>
-            <div class="container">
-                <div class="row">
-                    <!-- Card 1 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="img/imovel1.png" class="card-img-top" alt="Casa grande">
-                            <div class="card-body">
-                                <h5 class="card-title">Casa de 3 quartos - R$ 500.000</h5>
-                                <p class="card-text">Uma espaçosa casa com 3 quartos, ideal para famílias que buscam conforto e praticidade. Com um grande quintal e localização tranquila, oferece um ótimo custo-benefício.</p>
-                                <a href="receita1.html" class="btn btn-warning w-50">Ver Imóvel</a>
+                        <!-- Card 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="img/imovel3.png" class="card-img-top" alt="Casa aconchegante">
+                                <div class="card-body">
+                                    <h5 class="card-title">Casa de 2 quartos - R$ 350.000</h5>
+                                    <p class="card-text">Casa charmosa de 2 quartos, com ambiente acolhedor e perfeito
+                                        para
+                                        quem deseja um lar simples e confortável. Com área externa para lazer e fácil
+                                        acesso
+                                        a principais vias da cidade.</p>
+                                    <a href="#" class="btn btn-warning w-50">Ver Imóvel</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-        
-                    <!-- Card 2 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="img/imovel2.png" class="card-img-top" alt="Apartamento moderno">
-                            <div class="card-body">
-                                <h5 class="card-title">Apartamento de 2 quartos - R$ 300.000</h5>
-                                <p class="card-text">Apartamento moderno e aconchegante, perfeito para quem busca praticidade e conforto. Com 2 quartos, cozinha planejada e ótima localização perto de comércios e transporte público.</p>
-                                <a href="#" class="btn btn-warning w-50">Ver Imóvel</a>
+                </div>
+            </section>
+
+            <!-- ... -->
+            <section id="curadoria">
+                <span class="description-title" style="display: block; text-align: center;">
+                    <strong>CURADORIA VALE IMOBILIÁRIA</strong>
+                </span>
+                <h2 class="large-heading">Imóveis selecionados por nós</h2>
+                <div class="container">
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="img/imovel1.png" class="card-img-top" alt="Casa grande">
+                                <div class="card-body">
+                                    <h5 class="card-title">Casa de 3 quartos - R$ 500.000</h5>
+                                    <p class="card-text">Uma espaçosa casa com 3 quartos, ideal para famílias que buscam
+                                        conforto e praticidade. Com um grande quintal e localização tranquila, oferece
+                                        um
+                                        ótimo custo-benefício.</p>
+                                    <a href="receita1.html" class="btn btn-warning w-50">Ver Imóvel</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="img/imovel2.png" class="card-img-top" alt="Apartamento moderno">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apartamento de 2 quartos - R$ 300.000</h5>
+                                    <p class="card-text">Apartamento moderno e aconchegante, perfeito para quem busca
+                                        praticidade e conforto. Com 2 quartos, cozinha planejada e ótima localização
+                                        perto
+                                        de comércios e transporte público.</p>
+                                    <a href="#" class="btn btn-warning w-50">Ver Imóvel</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="img/imovel3.png" class="card-img-top" alt="Casa aconchegante">
+                                <div class="card-body">
+                                    <h5 class="card-title">Casa de 2 quartos - R$ 350.000</h5>
+                                    <p class="card-text">Casa charmosa de 2 quartos, com ambiente acolhedor e perfeito
+                                        para
+                                        quem deseja um lar simples e confortável. Com área externa para lazer e fácil
+                                        acesso
+                                        a principais vias da cidade.</p>
+                                    <a href="#" class="btn btn-warning w-50">Ver Imóvel</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-        
-                    <!-- Card 3 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="img/imovel3.png" class="card-img-top" alt="Casa aconchegante">
-                            <div class="card-body">
-                                <h5 class="card-title">Casa de 2 quartos - R$ 350.000</h5>
-                                <p class="card-text">Casa charmosa de 2 quartos, com ambiente acolhedor e perfeito para quem deseja um lar simples e confortável. Com área externa para lazer e fácil acesso a principais vias da cidade.</p>
-                                <a href="#" class="btn btn-warning w-50">Ver Imóvel</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </section>
-        
-        <!-- ... -->
-         <section id="curadoria">
-        <span class="description-title" style="display: block; text-align: center;">
-            <strong>CURADORIA VALE IMOBILIÁRIA</strong>
-        </span>
-        <h2 class="large-heading">Imóveis selecionados por nós</h2> 
-        <div class="container">
-            <div class="row">
-                <!-- Card 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="img/imovel1.png" class="card-img-top" alt="Casa grande">
-                        <div class="card-body">
-                            <h5 class="card-title">Casa de 3 quartos - R$ 500.000</h5>
-                            <p class="card-text">Uma espaçosa casa com 3 quartos, ideal para famílias que buscam conforto e praticidade. Com um grande quintal e localização tranquila, oferece um ótimo custo-benefício.</p>
-                            <a href="receita1.html" class="btn btn-warning w-50">Ver Imóvel</a>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Card 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="img/imovel2.png" class="card-img-top" alt="Apartamento moderno">
-                        <div class="card-body">
-                            <h5 class="card-title">Apartamento de 2 quartos - R$ 300.000</h5>
-                            <p class="card-text">Apartamento moderno e aconchegante, perfeito para quem busca praticidade e conforto. Com 2 quartos, cozinha planejada e ótima localização perto de comércios e transporte público.</p>
-                            <a href="#" class="btn btn-warning w-50">Ver Imóvel</a>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Card 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="img/imovel3.png" class="card-img-top" alt="Casa aconchegante">
-                        <div class="card-body">
-                            <h5 class="card-title">Casa de 2 quartos - R$ 350.000</h5>
-                            <p class="card-text">Casa charmosa de 2 quartos, com ambiente acolhedor e perfeito para quem deseja um lar simples e confortável. Com área externa para lazer e fácil acesso a principais vias da cidade.</p>
-                            <a href="#" class="btn btn-warning w-50">Ver Imóvel</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
+    </main>
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
-                 <img src="img/Logo.png" class="d-block" alt="Imagem Inicial"style="width: 150px; height: 150px;">
-                <p>Vale Imobiliária oferece soluções completas para compra, venda e aluguel de imóveis. Com experiência e atendimento personalizado, ajudamos você a encontrar o imóvel ideal com segurança e confiança. Descubra as melhores opções para realizar o seu sonho ou investimento!
+                <img src="img/Logo.png" class="d-block" alt="Imagem Inicial" style="width: 150px; height: 150px;">
+                <p>Vale Imobiliária oferece soluções completas para compra, venda e aluguel de imóveis. Com
+                    experiência e atendimento personalizado, ajudamos você a encontrar o imóvel ideal com segurança
+                    e confiança. Descubra as melhores opções para realizar o seu sonho ou investimento!
 
                 </p>
                 <p>Endereço: Rua Exemplo, 123, Cidade, Estado</p>
@@ -222,26 +259,29 @@
                     <li><strong>(11) 1234-5678</strong></li>
                     <span class="friendly-message">Atendimentos de segunda a sexta, das 8:00 às 17:00</span>
                     <li><strong>contato@valeimobiliaria.com.br</strong></li>
-                    <span class="friendly-message">Atendimento a clientes e dúvidas em geral. Respostas em até um dia útil</span>
+                    <span class="friendly-message">Atendimento a clientes e dúvidas em geral. Respostas em até um
+                        dia útil</span>
                 </ul>
             </div>
         </div>
-    <a href="index.html" class="button">Home</a>
-    <a href="imoveis.html" class="button">Imóveis</a>
-    <a href="contato.html" class="button">Contato</a>
-    <a href="quem.somos.html" class="button">Sobre Nós</a>
-    <a href="login.html" class="button">Login</a>
-    <a href="proprietario.html" class="button">Proprietário</a>
-    <a href="cliente.html" class="button">Cliente</a>
-       <a href="https://instagram.com" target="_blank"><img src="img/Instagram FOOTER.png" alt="Instagram Logo" class="social-logo"style="width: 50px; height: 50px;"></a></li><!--IMAGEM LOGO INSTAGRAM-->
-        <a href="https://facebook.com" target="_blank"><img src="img/Facebook FOOTER.png" alt="Facebook Logo" class="social-logo"style="width: 50px; height: 50px;"></a></li> <!--IMAGEM LOGO FACEBOOK-->
-        <a href="https://linkedin.com" target="_blank"><img src="img/Linkedin FOOTER.png" alt="Instagram Logo" class="social-logo"style="width: 50px; height: 50px;"></a></li><!--IMAGEM LOGO INSTAGRAM-->
-    <p>© 2024 Vale Imobiliária. Todos os direitos reservados.</p>
+        <a href="index.html" class="button">Home</a>
+        <a href="imoveis.html" class="button">Imóveis</a>
+        <a href="contato.html" class="button">Contato</a>
+        <a href="quem.somos.html" class="button">Sobre Nós</a>
+        <a href="login.html" class="button">Login</a>
+        <a href="proprietario.html" class="button">Proprietário</a>
+        <a href="cliente.html" class="button">Cliente</a>
+        <a href="https://instagram.com" target="_blank"><img src="img/Instagram FOOTER.png" alt="Instagram Logo"
+                class="social-logo" style="width: 50px; height: 50px;"></a></li><!--IMAGEM LOGO INSTAGRAM-->
+        <a href="https://facebook.com" target="_blank"><img src="img/Facebook FOOTER.png" alt="Facebook Logo"
+                class="social-logo" style="width: 50px; height: 50px;"></a></li> <!--IMAGEM LOGO FACEBOOK-->
+        <a href="https://linkedin.com" target="_blank"><img src="img/Linkedin FOOTER.png" alt="Instagram Logo"
+                class="social-logo" style="width: 50px; height: 50px;"></a></li><!--IMAGEM LOGO INSTAGRAM-->
+        <p>© 2024 Vale Imobiliária. Todos os direitos reservados.</p>
     </footer>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    </body>
-    
-      
 
-      
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</body>
+
 </html>
