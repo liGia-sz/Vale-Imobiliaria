@@ -1,25 +1,267 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vale Imobiliária</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="./style.css"> <!--Editar CSS mais tarde-->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Proprietários - Vale Imobiliária</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> 
+    <!--Bootstrap Icons-->
+    <link rel="icon" href="img/logo-barra.png" type="image/x-icon">
 
-    </head>
-    <body>
-        <h1>Funções:</h1>
-        <h2> - Informar sobre serviços para proprietários (administração e anúncios de imóveis).
-            
-            - Formulário para cadastro de imóvel.
-            
-            - Acesso a área de login para gerenciar imóveis cadastrados.
-            - Gerenciar anúncios de imóveis cadastrados.
-            Acompanhar propostas e solicitações de visitas.
-            Atualizar informações dos imóveis.
-        </h2>
-        <a href="login.html" class="button">Login</a><!--PARA PROPRIETÁRIOS-->
-    </body>
+    <style>
+        /* Estilos específicos para a página do Proprietário */
+        .hero-proprietario {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/background-proprietario.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .hero-proprietario h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .hero-proprietario p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+        }
+
+        .section-title {
+            color: #77542b;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        /* Estilos para os cards de serviço */
+        .service-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .service-card .icon {
+            font-size: 4rem;
+            color: #77542b;
+            margin-bottom: 20px;
+        }
+        .service-card h4 {
+            color: #343a40;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Estilos do formulário */
+        .form-cadastro-imovel {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .form-cadastro-imovel .btn-primary {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1rem;
+        }
+
+        /* Estilos para a área de login/gerenciamento */
+        .area-proprietario {
+            background-color: #e9f5ff; /* Um azul bem clarinho */
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .area-proprietario .btn-success {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+        }
+        .area-proprietario p {
+            font-size: 1.1rem;
+        }
+
+        .alert-success {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+ <header>
+        <nav class="navbar navbar-expand-lg bg-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/Logo.png" alt="Logo" width="90" height="90">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">  <!-- Alterado para ms-auto -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="imoveis.html">Imóveis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quem-somos.html">Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="proprietario.html">Proprietário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cliente.html">Cliente</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
+    </header>
+
+    <main>
+        <section class="hero-proprietario">
+            <div class="container">
+                <h1 class="animate__animated animate__fadeInDown">Seu Imóvel em Boas Mãos</h1>
+                <p class="animate__animated animate__fadeInUp">Administração, Anúncios e Gerenciamento Descomplicado para Proprietários.</p>
+                <a href="#cadastroImovel" class="btn btn-primary btn-lg animate__animated animate__zoomIn">Cadastre Seu Imóvel Agora!</a>
+            </div>
+        </section>
+
+        <section class="container my-5">
+            <h2 class="text-center section-title">Nossos Serviços para Você</h2>
+            <p class="text-center lead mb-5">Oferecemos soluções completas para gerenciar e valorizar seu patrimônio.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card service-card">
+                        <div class="icon">&#128227;</div> <h4>Anúncio de Imóveis</h4>
+                        <p>Divulgamos seu imóvel nos principais portais e em nossa vasta rede de clientes. Fotos profissionais, tour virtual e descrições detalhadas para atrair os melhores compradores/inquilinos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card service-card">
+                        <div class="icon">&#128172;</div> <h4>Administração de Aluguéis</h4>
+                        <p>Cuidamos de tudo para você: seleção rigorosa de inquilinos, elaboração de contratos, cobrança de aluguéis, repasse, manutenção e resolução de questões burocráticas. Tranquilidade para o seu investimento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mt-4">
+                    <p class="lead">Precisa de um serviço específico ou quer conversar mais sobre como podemos ajudar?</p>
+                    <a href="contato.html" class="btn btn-outline-primary btn-lg">Fale Conosco</a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="cadastroImovel" class="container my-5">
+            <h2 class="text-center section-title">Cadastre Seu Imóvel</h2>
+            <p class="text-center lead mb-4">Preencha o formulário abaixo e entraremos em contato para formalizar o anúncio ou a administração do seu imóvel.</p>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="formCadastroImovel" class="form-cadastro-imovel">
+                        <div class="mb-3">
+                            <label for="nomeProprietario" class="form-label">Seu Nome Completo *</label>
+                            <input type="text" class="form-control" id="nomeProprietario" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailProprietario" class="form-label">Seu E-mail *</label>
+                            <input type="email" class="form-control" id="emailProprietario" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefoneProprietario" class="form-label">Seu Telefone *</label>
+                            <input type="tel" class="form-control" id="telefoneProprietario" placeholder="(XX) XXXXX-XXXX" required>
+                        </div>
+                        <hr>
+                        <h5 class="mb-3">Informações do Imóvel</h5>
+                        <div class="mb-3">
+                            <label for="tipoImovel" class="form-label">Tipo de Imóvel *</label>
+                            <select class="form-select" id="tipoImovel" required>
+                                <option value="">Selecione</option>
+                                <option value="apartamento">Apartamento</option>
+                                <option value="casa">Casa</option>
+                                <option value="comercial">Comercial</option>
+                                <option value="terreno">Terreno</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="finalidadeImovel" class="form-label">Finalidade *</label>
+                            <select class="form-select" id="finalidadeImovel" required>
+                                <option value="">Selecione</option>
+                                <option value="venda">Venda</option>
+                                <option value="aluguel">Aluguel</option>
+                                <option value="ambas">Venda e Aluguel</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="enderecoImovel" class="form-label">Endereço Completo do Imóvel *</label>
+                            <input type="text" class="form-control" id="enderecoImovel" placeholder="Rua, Número, Bairro, Cidade, Estado, CEP" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descricaoImovel" class="form-label">Breve Descrição do Imóvel</label>
+                            <textarea class="form-control" id="descricaoImovel" rows="4" placeholder="Ex: Quantidade de quartos, banheiros, vagas, diferenciais, etc."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fotosImovel" class="form-label">Anexar Fotos (opcional, até 5 fotos)</label>
+                            <input type="file" class="form-control" id="fotosImovel" multiple accept="image/*">
+                        </div>
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="termosUso" required>
+                            <label class="form-check-label" for="termosUso">
+                                Declaro que li e concordo com os <a href="#" data-bs-toggle="modal" data-bs-target="#modalTermosUso">Termos de Uso e Política de Privacidade</a>. *
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+                        <div id="feedbackMensagem" class="alert mt-3" style="display: none;"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="container my-5">
+            <h2 class="text-center section-title">Gerencie Seus Imóveis Cadastrados</h2>
+            <div class="area-proprietario">
+                <p>Já possui um imóvel cadastrado conosco?</p>
+                <p>Acesse sua área exclusiva para acompanhar propostas, gerenciar anúncios, atualizar informações e solicitar visitas.</p>
+                <a href="login.html" class="btn btn-success btn-lg mt-3">Acessar Área do Proprietário</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal fade" id="modalTermosUso" tabindex="-1" aria-labelledby="modalTermosUsoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTermosUsoLabel">Termos de Uso e Política de Privacidade</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>1. Coleta de Dados:</strong> Ao utilizar nosso formulário, você concorda com a coleta e armazenamento de seus dados pessoais (nome, e-mail, telefone) e informações sobre o imóvel (endereço, tipo, descrição, fotos).</p>
+                    <p><strong>2. Finalidade:</strong> Os dados serão utilizados exclusivamente pela Vale Imobiliária para fins de contato, avaliação e divulgação do imóvel, bem como para a gestão dos serviços contratados (administração, locação, venda).</p>
+                    <p><strong>3. Compartilhamento:</strong> Seus dados não serão compartilhados com terceiros sem sua prévia autorização, exceto quando exigido por lei.</p>
+                    <p><strong>4. Segurança:</strong> Empregamos medidas de segurança para proteger suas informações, mas não podemos garantir segurança absoluta. Você é responsável por manter a confidencialidade de suas credenciais de acesso, caso as possua.</p>
+                    <p><strong>5. Direitos do Usuário:</strong> Você tem o direito de acessar, corrigir ou excluir seus dados a qualquer momento, entrando em contato conosco.</p>
+                    <p><strong>6. Consentimento:</strong> Ao clicar em "Enviar Cadastro", você consente expressamente com esta Política de Privacidade e com o uso de seus dados conforme descrito. Recomendamos a leitura completa da nossa Política de Privacidade em <a href="politica-privacidade.html" target="_blank">link para sua política completa</a>.</p>
+                    <p>A Vale Imobiliária se compromete com a proteção dos seus dados e a transparência em todos os processos. Em caso de dúvidas, entre em contato conosco.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/proprietario.js"></script> </body>
 </html>
